@@ -1,0 +1,484 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Homepage with Bootstrap and slide </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		.slider{
+			position: relative;
+			width: 960px;
+			height: 400px;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+		.slides{
+			width: 8000px;
+			height: 400px;
+			display: block;
+			list-style: none;
+			margin: 0;
+            padding: 0;
+            background-color: #f00a7d;
+		}
+		.slide{
+			width: 960px;
+			height: 400px;
+			float: left;
+		}
+		.prev, .next {
+		  cursor: pointer;
+		  position: absolute;
+		  top: 50%;
+		  width: auto;
+		  margin-top: -22px;
+		  padding: 16px;
+		  color: black;
+		  font-weight: bold;
+		  font-size: 25px;
+		  transition: 0.6s ease;
+		  border-radius: 0 3px 3px 0;
+		  user-select: none;
+		}
+		.prev
+		{
+			left:15%;
+		}
+		.next {
+		  right: 15%;
+		  border-radius: 3px 0 0 3px;
+		}
+		.prev:hover, .next:hover {
+		  background-color: rgba(0,0,0,0.8);
+		  color: white;
+		}
+        .dot{
+        	position: relative;
+        	left: 40%;
+        	bottom: 5%;
+        	width: 200px;
+        	height: 13px;
+        	padding: 2px;
+        	text-align: center;
+        }
+        .fa1{
+        	color: red;
+        }
+  
+
+	</style>
+  
+<link rel="stylesheet" type="text/css" href="home_slide.css">
+
+
+  </head>
+  <body style="font-family: sans-serif;">
+<!-- nagigation bar -->
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#" style="color: #f00a7d;font-size: 50px;margin-right: 50%;padding-left:8%;">Oslo</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+    <div class="navbar-nav" style="padding-left: 15%">
+      <a class="nav-link " href="#FEATURES">FEATURES <span class="sr-only">(current)</span></a>
+      <a class="nav-link" href="#REVIEWS">REVIEWS</a>
+      <a class="btn btn-primary sign_up_button" href="#SIGN_UP" role="button" >SIGN UP</a>
+          </div>
+  </div>
+</nav>
+<!-- banner -->
+
+<section class="container-fluid banner"  >
+	<div class="slider">
+		<ul class="slides">
+			<li class="slide" id="im1"><img src="img15.jpg" class="img-fluid" width="100%" style="opacity: 60%;"></li>
+			<li class="slide" id="im2"><img src="img12.jpg" class="img-fluid" width="100%" style="opacity: 60%;"></li>
+			<li class="slide" id="im3"><img src="img13.jpg" class="img-fluid" width="100%" style="opacity: 60%;"></li>
+			<li class="slide" id="im1"><img src="img14.jpg" class="img-fluid" width="100%" style="opacity: 60%;"></li>
+		</ul>
+		
+           <a class="btn btn-primary banner_button" href="#" role="button" >Learn more</a> </div>
+		<a class="next" id="b1"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+		<a class="prev" id="b2"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+		<div class="dot">
+			<i class="fa fa-circle-o f1" aria-hidden="true" id="1"></i>
+			<i class="fa fa-circle-o" aria-hidden="true" id="2"></i>
+			<i class="fa fa-circle-o" aria-hidden="true" id="3"></i>
+		</div>
+		<div style="position: absolute;transform: translateY(-280%);color: white;text-align: center ;width:50%;float: right;margin-left:25%;">
+		<h1 class="display-4" style="margin-left:10%;height: auto;font-size: 2vw;"  >Unleash your potential </h1>
+          <p class="lead" style="font-size: 1vw;">I'm a text box. Double click me to edit the text or to change the way I look. You can change the font size,color and so much more.For advanced styling options, click on "more" located on the right hand side of the text editing menu.
+</p>
+</div>
+	   </div>
+<!-- 	<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" ></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-interval="1000" style="background-color: #f00a7d;">
+      <img src="/home/cedcoss/Desktop/tasks/bootstrap/images/img8_1.jpg" class="d-block w-100" alt="img1" style="height:550px;opacity: 60%;">
+       <div class="carousel-caption">
+      	<h1 class="display-4" style="margin:40px;height: auto;font-size: 7vw;"  >Unleash your potential </h1>
+          <p class="lead">I'm a text box. Double click me to edit the text or to change the way I look. You can change the font size,color and so much more.For advanced styling options, click on "more" located on the right hand side of the text editing menu.
+</p>
+           <a class="btn btn-primary banner_button" href="#" role="button" >Learn more</a> </div>
+    </div>
+    <div class="carousel-item" data-interval="1000" style="background-color: #f00a7d;">
+      <img src="/home/cedcoss/Desktop/tasks/bootstrap/images/img6.jpg" class="d-block w-100" alt="img2" style="height:550px;opacity: 60%;">
+       <div class="carousel-caption">
+      	<h1 class="display-4" style="margin:40px;height: auto;font-size: 7vw;"  >Unleash your potential </h1>
+          <p class="lead">I'm a text box. Double click me to edit the text or to change the way I look. You can change the font size,color and so much more.For advanced styling options, click on "more" located on the right hand side of the text editing menu.
+</p>
+           <a class="btn btn-primary banner_button" href="#" role="button" >Learn more</a> </div>
+    </div>
+    <div class="carousel-item" data-interval="1000" style="background-color: #f00a7d;"> 
+      <img src="/home/cedcoss/Desktop/tasks/bootstrap/images/img8.jpg" class="d-block w-100" alt="img3" style="height:550px;opacity: 60%;">
+      <div class="carousel-caption " >
+      	<h1 class="display-4" style="margin:40px;height: auto;font-size: 7vw;"  >Unleash your potential </h1>
+          <p class="lead">I'm a text box. Double click me to edit the text or to change the way I look. You can change the font size,color and so much more.For advanced styling options, click on "more" located on the right hand side of the text editing menu.
+</p>
+           <a class="btn btn-primary banner_button" href="#" role="button" >Learn more</a> </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div> -->
+</section>
+<!-- about -->
+<section id="ABOUT" style="height: 50%;padding-top:5%; ">
+	<div class="container-fluid" style="height: auto;">
+
+
+<div class="row abt_row">
+
+
+  <div class="col-sm-5 abt_col_1" >
+    <h6 class="abt_heading">//01 ABOUT</h6>
+    <p class="abt_heading_txt" >
+        We all want our jobs to run smoothly
+      </p>
+      <p class="abt_para" >
+        I'm a text box. Double click me to edit the text or to change the way I look. You can change the font size,color and so much more.For advanced styling options, click on "more" located on the right hand side of the text editing menu.
+      </p>
+      <p><button type="button" name="learn more" class="btn btn-primary btn-lg abt_started_btn">Get Started</button></p>
+  </div>
+
+
+
+		<div class="col-sm-7" style="height: 100%;">
+         <div class="container abt_img_outer" style=" ">
+        <div class="container abt_img" style="">
+       
+
+        <div class="container abt_img_border" >
+      
+        </div>
+       </div>
+	   </div>
+       </div>
+
+</div>
+</div>
+</section>
+<!-- features -->
+<section id="FEATURES" class="container-fluid" >
+	<div class="container-fluid features_container" >
+	<div class="container-fluid" style="text-align: center;padding-top: 4%;">
+		<h6 style="color: black;">//02Features</h6>
+		<p  class="feature_head" >Be on the same page</p>
+	</div>
+	<div class="container-fluid">
+		<div class="row" >
+			<div class="col-sm-4">
+			<i class="fa fa-th-list fa-2x , icons" aria-hidden="true" ></i><br><br>
+			<p class="icon_text">I'm a text box. Double click me to edit the <br> text or to change the way I look.<br></p>
+            </div>
+
+			<div class="col-sm-4">
+				<i class="fa fa-user fa-2x , icons" aria-hidden="true" ></i><br><br>
+			<p class="icon_text">I'm a text box. Double click me to edit the <br> text or to change the way I look.<br></p>
+			</div>
+
+			<div class="col-sm-4">
+				<i class="fa fa-users fa-2x , icons" aria-hidden="true" ></i><br><br>
+			<p class="icon_text" >I'm a text box. Double click me to edit the <br> text or to change the way I look.<br></p>
+			</div>
+		</div>
+		
+	</div>
+	<div class="container-fluid" style="height: auto;">
+<div class="row" >
+	
+
+
+	<div class="col-sm-7" style="height: 100%;padding-top: 1%;">
+         <div class="container features_img_container" >
+        <div class="container features_img" >
+       
+
+        <div class="container features_img_border" >
+      
+        </div>
+       </div>
+	   </div>
+       </div>
+		<div class="col-sm-5" style="padding-left: 6%;padding-right: 8%;padding-top: 2%;">
+		
+		<p class="features_text_heading" >
+				Add structure to your daily tasks
+			</p>
+			<p class="features_data" >
+				I'm a text box. Double click me to edit the text or to change the way I look. You can change the font size,color and so much more.For advanced styling options, click on "more" located on the right hand side of the text editing menu.
+			</p>
+			<p><button type="button" name="learn more" class="btn btn-primary btn-lg learn_more_btn" >Get Started</button></p>
+	</div>
+	</div>
+</div>
+</div>
+</section>
+<!-- dashboard -->
+
+<section class="container-fluid dashboard_container" id="DASHBOARD" >
+	<div class="container-fluid" style="padding-left: 30%;padding-right: 30%;">
+		<h6 style="color: black;">//03 DASHBOARD</h6>
+		<p class="dashboard_head" >
+				Everything works better when it looks better
+			</p>
+	</div>
+	<img src="img9.png" style="height:30%;width: 40%;" alt="photo">
+	<div class="container-fluid"><p class="dashboard_bottom_txt">
+				I'm a text box. Double click me to edit the text or to change the way I look. You can change the font size,color and so much more.<br>For advanced styling options, click on "more" located on the right hand side of the text editing menu.
+			</p></div>
+</section>
+
+<!-- reviews -->
+<section class="container-fluid review_container" id="REVIEWS" >
+
+	 <div class="container-fluid" style="padding-left: 20%;padding-right: 20%;">
+		<h6 style="color: black;">//04 REVIEWS</h6>
+		<p style=" font-size: 40px;text-align: center;color: gray;">A few words from our <span style="color:#f00a7d;">amazing </span><br>and trusting customers</p>
+	</div>
+			<div class="container-fluid" style="height: auto;">
+				<div class="row" style="margin: 2%;height: auto;">
+					
+					<div class="col-md-3" style="margin: 3%;height: auto;padding-top: 2%;border:1px solid black;border-color: #ededed;">
+						<p style="color: gray;font-size: 15px;">Typical day will be to collaborate with Authors, Engineers, and Customers over drawing and manual specs and their corresponding standards. Then create Mechanical/Electrical Art using many systems, for research and design.</p>
+							<figure>
+								<img src="p1.jpg" class="img-fluid" style="border-radius: 100%;margin-top: 1%; align-self: center;" alt="Suzy Huller">
+								<figcaption style="text-align: center;"><b>Suzy Huller</b><br>Ilustrator </figcaption>
+								</figure>
+					</div>
+
+					<div class="col-md-3" style="margin: 3%;padding-top: 2%;border:1px solid black;border-color: #ededed;">
+					      <p style="color: gray;font-size: 15px;">Typical day will be to collaborate with Authors, Engineers, and Customers over drawing and manual specs and their corresponding standards. Then create Mechanical/Electrical Art using many systems, for research and design.</p>
+					      <figure>
+						  <img src="p3.jpg" class="img-fluid" style="border-radius: 100%; margin-top: 1%; align-self: center;" alt="Mark Jhonson">
+							<figcaption style="text-align: center;"><b>Mark Jhonson</b><br>Ilustrator </figcaption>
+							</figure>
+					</div>
+					
+
+					<div class="col-md-3" style="margin: 3%;padding-top: 2%;border:1px solid black;border-color: #ededed;">
+						<p style="color: gray;font-size: 15px;">Typical day will be to collaborate with Authors, Engineers, and Customers over drawing and manual specs and their corresponding standards. Then create Mechanical/Electrical Art using many systems, for research and design.</p>
+						<figure>
+							<img src="p2.jpg" class="img-fluid" style="margin-top:2%;border-radius: 100%; align-self:center;" alt="Kimberly Lee">
+								<figcaption style="text-align: center;"><b>Kimberly Lee</b><br>Ilustrator </figcaption>
+								</figure>
+					</div>
+									
+				</div>
+			</div>
+		</section>
+<!-- sign up -->
+
+		<section class="container-fluid" id="SIGN_UP" style="height: auto;padding: 0;">
+			<!--the pink division -->
+			<div class="row" style="height: auto;background-color: #f00a7d;background-image:linear-gradient(to right,#f20544,#f00a7d);">
+				<div class="col-md-9" style="color:white;font-size: 30px;padding-top:2%;padding-bottom: 2%;">
+					<div class="container">
+					Did you want to be notified when we launch?
+					</div>
+				</div>
+				<div class="col-md-3" style="text-align: center;padding-top: 2%;padding-bottom: 2%;">
+					<a class="btn btn-primary " href="#" role="button" style="background-color: white;border:1px white; color: #f00a7d;">SIGN UP</a>
+				</div>
+			</div>
+			<!-- the text and form div -->
+			<div class="container-fluid" style="height: auto;background-image: url('img8.jpg');background-size: cover;padding: 0;">
+				<div class="row" style="background-color: black;height: auto;opacity: 75%;padding-bottom: 5%;padding-right: 0;padding-left: 0">
+				<div class="col-md-6" style="color:white;padding-left: 14%;text-align: left;">
+					<p style="color: white;font-size: 20px;padding-top: 12%">//Sign Up</p>
+					<p style=" font-size: 40px;color: white;padding-bottom: 6%;">Get creative with<br> this revolutionary tool
+					</p>
+					
+					<p style=" font-size: 15px;color: white;padding-bottom: 6%;">I'm a text box. Double click me to edit the text or to change the way I look. You can change the font size,color and so much more.
+						</p>
+
+				</div>
+
+
+				<div class="col-md-6" style="padding: 2%; padding-right: 15%; padding-left: 10%">
+					<form>
+						 <div class="form-group">
+						     <label for="name" style="color: white;">Name:</label>
+						     <input type="text" class="form-control" id="name" >
+					     </div>
+					       <div class="form-group">
+					          <label for="exampleInputEmail1" style="color: white;">Email address<span style="color: #f00a7d;">*</span>:</label>
+					          <input type="email" class="form-control" id="exampleInputEmail1" >
+					           </div>
+					       <div class="form-group">
+					            <label for="message" style="color: white;">Message:</label>
+					            <textarea rows="5" class="form-control" id="message"></textarea>
+					           <!--  <input type="password" class="form-control" id="exampleInputPassword1"> -->
+					        </div>
+					        <button type="submit" class="btn btn-primary" style="background-color: #f00a7d;color: white;border:1px solid black;border-color: #f00a7d;width:100%;">Submit
+					        </button>
+					</form>
+				</div>
+			</div>
+			</div>
+		</section>
+	<footer class="container-fluid">
+  <div class="row" style="padding-top: 5%;">
+    <div class="col-md-4 text-center">
+      <i class="fa fa-facebook-f fa-3x " style="margin: 1%;"></i>
+          <i class="fa fa-instagram fa-3x " style="margin: 1%;"></i>
+          <i class="fa fa-twitter fa-3x " style="margin: 1%;"></i>
+    </div>
+        <div class="col-md-4 text-center">
+          <a href="#" style="color: #f00a7d;font-size: 50px;">Oslo</a><br><span style="color: black;font-size: 20px;"><i class="fa fa-heart " style="color:#f00a7d;"></i>Crafted lovingly with Page Cloud</span>
+
+        </div>
+    <div class="col-md-4 text-center" >
+     
+ 
+    
+      <a class="nav-link " href="#FEATURES" style="display: inline;color: black;">FEATURES</a>
+      <a class="nav-link" href="#REVIEWS" style="display: inline;color: black;">REVIEWS</a>
+      <a class="btn btn-primary" href="#SIGN_UP" role="button" style="color:white;background-color: #f00a7d; border:2px #f00a7d;width: 120px;">SIGN UP</a>
+          </div>
+  </div>
+   
+
+</footer>
+			
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		var $slides=$('.slides');
+		var currentSlide=1;
+		var slideCount=$slides.children().length;
+		console.log(slideCount);
+		var slideTime=2000;
+
+		setInterval(function(){
+            $slides.animate({
+            	marginLeft: '-=960px'
+            },slideTime,function(){
+            	console.log(currentSlide);
+            	currentSlide++;
+            	chageColor();
+            	if(currentSlide==slideCount){
+            		currentSlide=1;
+            		$(this).css("margin-left","0px");
+            	}
+            });
+            console.log("counters "+currentSlide);
+		},3000);
+
+		$('#b1').click(function(){
+			currentSlide++;
+			if(currentSlide>=4){
+				currentSlide=1;
+				console.log("clicked");
+				  $slides.animate({marginLeft: '0px'});
+			}else{
+				 $slides.animate({marginLeft: '-=960px'});
+			}
+		})
+		$('#b2').click(function(){
+			currentSlide--;
+			if(currentSlide==0){
+				currentSlide=4;
+				console.log("clicked");
+				 $slides.animate({marginLeft: '-960px'});
+			}else{
+				 $slides.animate({marginLeft: '+=960px'});
+			}
+		})
+
+		$('.fa').click(function(){
+			currentSlide++;
+			var d=this.id;
+			if(d==1){
+				currentSlide=1;
+				$slides.animate({
+            	marginLeft: '0px'});
+            	$('#1').css("color","red");
+            	$('#2,#3').css("color","black");
+			}
+			else if(d==2){
+				currentSlide=2;
+				$slides.animate({
+            	marginLeft: '-960px'});
+            	$('#2').css("color","red");
+            	$('#1,#3').css("color","black");
+			}
+			else if(d==3){
+				currentSlide=3;
+				$slides.animate({
+            	marginLeft: '-1920px'});
+            	$('#3').css("color","red");
+            	$('#2,#1').css("color","black");
+			}
+			else if(d==4){
+				currentSlide=4;
+				$slides.animate({
+            	marginLeft: '-1920px'});
+            	$('#1').css("color","red");
+            	$('#2,#3').css("color","black");
+			}	
+		})
+
+		function chageColor(){
+			if(currentSlide==1){
+				$('#1').css("color","red");
+            	$('#2,#3').css("color","black");
+			} else if (currentSlide==2) {
+				$('#2').css("color","red");
+            	$('#1,#3').css("color","black");
+			}
+			else if (currentSlide==3) {
+				$('#3').css("color","red");
+            	$('#1,#2').css("color","black");
+			}
+			else if (currentSlide==4) {
+				$('#1').css("color","red");
+            	$('#3,#2').css("color","black");
+			}
+		}
+
+
+        
+	</script>
+	</body>
+</html>
+
